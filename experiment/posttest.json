@@ -3,7 +3,7 @@
   "questions": [
     {
 
-      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pos1.png' height='300px'><br>(a)<br><img src='images/pos2.png' height='300px'>(b)<br><br>Fig. 2. Circuit configuration of single-phase controlled rectifier with (a) C-Filter and (b) L-C-Filter.</center><br><br> 1. When the firing angle of a thyristor in a controlled rectifier circuit is increased, what happens to the average output load voltage?",
+      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pos1.png' height='300px'><br>(a)<br><img src='images/pos2.png' height='300px'><br>(b)<br>Fig. 2. Circuit configuration of single-phase controlled rectifier with (a) C-Filter and (b) L-C-Filter.</center><br><br> 1. When the firing angle of a thyristor in a controlled rectifier circuit is increased, what happens to the average output load voltage?",
       "answers": {        
         "a": "It remains constant.",
         "b": "It increases.",
