@@ -37,7 +37,7 @@ Typical waveforms for controlled bridge rectifier with C-filter is given in Fig.
 <td style="width:50%">
 <center>
 
-<img src="images/th4.png">
+<img src="images/th4.png" height="450px;">
 <br><br>
 (a)
 <br><br>
@@ -47,7 +47,7 @@ Typical waveforms for controlled bridge rectifier with C-filter is given in Fig.
   
 <center>
 
-<img src="images/th5.png">
+<img src="images/th5.png" height="450px;">
 <br><br>
 (b)
 <br><br>
@@ -58,7 +58,7 @@ Typical waveforms for controlled bridge rectifier with C-filter is given in Fig.
 <td colspan="2" style="width:100%">
 <center>
 
-<img src="images/th6.png">
+<img src="images/th6.png" height="450px;">
 <br><br>
 (c)
 <br><br>
