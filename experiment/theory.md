@@ -220,7 +220,12 @@ If the firing angle of controlled rectifier with C-filter is less than the criti
 </div>
 
 
+<div style="float: left; width:100%;"><br>
+
 #### LC-Filter<br>
+</div>
+
+<br>
 
 <div style="float: left; width:100%;"><br>
 Various mathematical expressions are given below to quantify the rectifier performance parameters. Average voltage appearing across load is defined by
