@@ -2,12 +2,51 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+
+      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pre1.png' height='300px'><br>(a)<br><img src='images/pre2.png' height='300px'>(b)<br><br>Fig. 1. Circuit configuration of Single-Phase controlled Rectifier with (a) C-Filter, and (b) L-C-Filter</center><br><br> 1. What is the primary role of capacitor filter in a controlled rectifier?",
+      "answers": {        
+        "a": "Increases the output voltage",
+        "b": "Reduces the ripple in the DC output voltage",
+        "c": "Decreases the output voltage",
+        "d": "Controls the phase angle of the input AC"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+      
+    {
+
+      "question": "2. When the firing angle of the thyristors in a controlled bridge rectifier is increased, the average DC output voltage:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Increases",
+        "b": "Decreases",
+        "c": "Remains the same",
+        "d": "Fluctuates randomly"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+
+      "question": "3. The term 'firing angle' in the context of a controlled bridge rectifier refers to:",
+      "answers": {
+        "a": "The angle at which the thyristors are triggered",
+        "b": "The angle at which the capacitor starts charging ",
+        "c": "The angle of phase shift between input AC and output DC",
+        "d": "The angle at which the load is connected to the input AC supply"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -18,13 +57,15 @@
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+        
     {
-      "question": "This is a Sample Question 2?",
+
+      "question": "4. Given an RL load in a controlled bridge rectifier circuit with L=2 H and R=10 Ω, if the AC input supply frequency is 50 Hz, what is the ripple frequency in the output load voltage?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "25 Hz",
+        "b": "50 Hz",
+        "c": "100 Hz",
+        "d": "200 Hz"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -33,6 +74,26 @@
         "d": "Explanation 2"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    
+    {
+      
+
+      "question": "5. What is the impact of increasing the value of the capacitor in the filter circuit of a controlled bridge rectifier?",
+      "answers": {
+        "a": "Decreases the ripple voltage and increases the output voltage",
+        "b": "Increases the ripple voltage and decreases the output voltage",
+        "c": "Has no effect on the ripple voltage or output voltage",
+        "d": "Decreases the ripple voltage and improves the load voltage profile"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]
