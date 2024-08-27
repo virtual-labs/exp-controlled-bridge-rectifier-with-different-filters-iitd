@@ -129,7 +129,7 @@ Various mathematical expressions are given below to quantify the rectifier perfo
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th10.png" height="60px">
+  <img src="images/th10.png" height="130px">
 </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(1)
