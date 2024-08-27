@@ -14,7 +14,7 @@ The capacitor filter is a cost-effective and widely used filter configuration. T
 <br>
 
 <center>
-  <img src="images/th2.png" height="700px">
+  <img src="images/th2.png" height="220px">
   
 <br>Fig.2. Circuit configuration of single phase controlled bridge rectifier with C-filter
 
@@ -24,7 +24,7 @@ The rectifier with LC-filter configuration incorporates an additional inductor b
 <br>
 
 <center>
-  <img src="images/th3.png" height="700px">
+  <img src="images/th3.png" height="220px">
   
 <br>Fig.3. Circuit configuration of single-phase controlled bridge rectifier with LC-filter.
 
@@ -39,7 +39,7 @@ Typical waveforms for controlled bridge rectifier with C-filter is given in Fig.
 
 <img src="images/th4.png">
 <br><br>
-Fig.3. Circuit configuration of single-phase controlled bridge rectifier with LC-filter.
+(a)
 <br><br>
 </center>
 </td>
@@ -49,7 +49,7 @@ Fig.3. Circuit configuration of single-phase controlled bridge rectifier with LC
 
 <img src="images/th5.png">
 <br><br>
-Fig. 3(b). Negative-half cycle.
+(b)
 <br><br>
 </center> 
     </td>
