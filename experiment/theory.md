@@ -119,3 +119,141 @@ Fig. 5. Typical waveforms for controlled rectifier with L-C-Filter (a) α = 0&#1
 </div>
 
 #### C-Filter<br>
+
+<br>
+Various mathematical expressions are given below to quantify the rectifier performance parameters. Average voltage appearing across load is defined by
+
+<div style="float: left; width:50%;">
+  <img src="images/th10.png" height="60px">
+</div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(1)
+</div>
+<br>
+
+<div style="float: left; width:100%;">
+Average load current is given by
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th11.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(2)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+where,<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th12.png" height="70px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(3)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+The peak-to-peak ripple in output voltage is given by
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th13.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(4)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+  The AC component in rectifier output voltage is given by
+</div><br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th14.png" height="50px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(5)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+The ripple factor is given by
+</div><br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th15.png" height="50px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(6)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+If the firing angle of controlled rectifier with C-filter is less than the critical value of firing angle (αc) then the rectifier works as an uncontrolled rectifier and the firing angle change in this range will not affect the nature of output voltage waveform as shown in Fig. 6. However, when the firing angle is higher than “αc” then the load voltage linearly decreases with firing angle. 
+<br>
+</div>
+
+<div style="float: left; width:100%;"><br>
+<center>
+  <img src="images/th16.png" height="220px">
+  
+<br>Fig. 6. Output load voltage with and without capacitor filter.
+
+</center>
+<br>
+</div>
+
+
+#### LC-Filter<br>
+
+<div style="float: left; width:100%;"><br>
+Various mathematical expressions are given below to quantify the rectifier performance parameters. Average voltage appearing across load is defined by
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th17.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(7)
+
+</div>
+<br><br>
+
+<div style="float: left; width:100%;"><br>
+The peak-to-peak ripple in output voltage is given by
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th18.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(8)
+
+</div>
+<br>
+<br><br>
+
+<div style="float: left; width:100%;"><br>
+where V<sub>0_2h</sub>  is the 2nd harmonic (dominating harmonic) component.<br>
+The ripple factor is given by
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th19.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(9)
+
+</div>
+<br>
