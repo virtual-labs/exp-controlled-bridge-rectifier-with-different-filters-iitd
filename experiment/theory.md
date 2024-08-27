@@ -120,11 +120,8 @@ Fig. 5. Typical waveforms for controlled rectifier with L-C-Filter (a) α = 0&#1
 
 <div style="float: left; width:100%;"><br>
 
-#### C-Filter<br>
+#### C-Filter
 </div>
-
-<br>
-
 
 <div style="float: left; width:100%;"><br>
   
@@ -222,10 +219,8 @@ If the firing angle of controlled rectifier with C-filter is less than the criti
 
 <div style="float: left; width:100%;"><br>
 
-#### LC-Filter<br>
+#### LC-Filter
 </div>
-
-<br>
 
 <div style="float: left; width:100%;"><br>
 Various mathematical expressions are given below to quantify the rectifier performance parameters. Average voltage appearing across load is defined by
