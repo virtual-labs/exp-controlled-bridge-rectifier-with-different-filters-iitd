@@ -114,7 +114,7 @@ Fig. 4. Typical waveforms for controlled rectifier with C-Filter (a) α = 0&#176
 
 <div style="float: left; width:100%;"><br>
 Fig. 5. Typical waveforms for controlled rectifier with L-C-Filter (a) α = 0&#176;, (b) α = 30&#176; and (c) α = 60&#176;.
-<br><br>
+<br>
 
 </div>
 
@@ -213,9 +213,7 @@ If the firing angle of controlled rectifier with C-filter is less than the criti
 <br>Fig. 6. Output load voltage with and without capacitor filter.
 
 </center>
-<br>
 </div>
-
 
 <div style="float: left; width:100%;"><br>
 
@@ -260,7 +258,7 @@ The ripple factor is given by
 <div style="float: left; width:50%;">
   <img src="images/th19.png" height="80px">
       </div>
-<div style="float: right; width:50%; text-align:center;">
+<div style="float: right; width:50%; text-align:center;"><br>
     ..(9)
 
 </div>
