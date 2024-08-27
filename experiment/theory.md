@@ -118,10 +118,18 @@ Fig. 5. Typical waveforms for controlled rectifier with L-C-Filter (a) α = 0&#1
 
 </div>
 
+<div style="float: left; width:100%;"><br>
+
 #### C-Filter<br>
+</div>
 
 <br>
-Various mathematical expressions are given below to quantify the rectifier performance parameters. Average voltage appearing across load is defined by
+
+
+<div style="float: left; width:100%;"><br>
+  
+Various mathematical expressions are given below to quantify the rectifier performance parameters. Average voltage appearing across load is defined by<br>
+</div>
 
 <div style="float: left; width:50%;">
   <img src="images/th10.png" height="60px">
