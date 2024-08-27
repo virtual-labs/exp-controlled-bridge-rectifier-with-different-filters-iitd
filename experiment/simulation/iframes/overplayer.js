@@ -116,13 +116,10 @@ const overPlayer = {
     // * Capture the slides end
 
     var interval = window.setInterval(()=>{
-      let isSlideEnded = JSON.parse(localStorage.getItem("isSlideEnded"))
-      if(isSlideEnded==false){
-        console.log("ended:",isSlideEnded)
+      let isSlideEnded = localStorage.getItem("isSlideEnded")
+      if(isSlideEnded=="false"){
         if(this.playerNextBtn.disabled == true){
           localStorage.setItem("isSlideEnded",true)
-        }else{
-          localStorage.setItem("isSlideEnded",false)
         }
       }else{
         window.clearInterval(interval)
@@ -132,9 +129,9 @@ const overPlayer = {
   },
 };
 
+overPlayer.init()
 window.setTimeout(()=>{
-  overPlayer.init()
   overPlayer.onSlidesEnd()
-},1000)
+},2000)
 // overPlayer.onPlayBtn()
 

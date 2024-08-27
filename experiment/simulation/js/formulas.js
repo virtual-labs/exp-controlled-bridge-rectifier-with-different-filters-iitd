@@ -1,174 +1,238 @@
 const pie = 3.1428
+let getVal = function(formulaIdx){
+
+    let lookUp_1, lookUp_2, lookUp_3
+
+    switch(values.D){
+        case 0:
+            {
+                 lookUp_1 = [
+                    [204.25, 214.55, 212.66],
+                    [201.50, 195.70, 192.58],
+                    [172.42, 168.33, 166.48],
+                ]
+            
+                 lookUp_2 = [
+                    [74.91, 35.49, 15.88],
+                    [55.26, 24.73, 11.13],
+                    [36.77, 16.31, 7.48],
+                ]
+            
+                 lookUp_3 = [
+                    [36.68, 16.54, 7.47],
+                    [27.42, 12.64, 5.78],
+                    [21.33, 9.69, 4.49],
+                ]
+            }
+            break
+            
+        case 30:
+            {
+                 lookUp_1 = [
+                    [204.25, 214.55, 212.66],
+                    [201.50, 195.70, 192.58],
+                    [172.42, 168.33, 166.48],
+                ]
+            
+                 lookUp_2 = [
+                    [74.65, 35.02, 15.84],
+                    [55.66, 24.62, 11.04],
+                    [36.75, 16.29, 7.47],
+                ]
+            
+                 lookUp_3 = [
+                    [36.55, 16.32, 7.45],
+                    [27.62, 12.58, 5.73],
+                    [21.31, 9.68, 4.49],
+                ]
+            }
+            break
+
+        case 60:
+            {
+                 lookUp_1 = [
+                    [207.94, 214.55, 212.66],
+                    [201.13, 195.62, 192.56],
+                    [169.77, 165.95, 164.14],
+                ]
+            
+                 lookUp_2 = [
+                    [74.38, 35.43, 15.53],
+                    [56.02, 24.69, 11.09],
+                    [37.31, 16.51, 7.57],
+                ]
+            
+                 lookUp_3 = [
+                    [37.21, 16.51, 7.30],
+                    [27.85, 12.62, 5.76],
+                    [21.98, 9.95, 4.61],
+                ]
+            }
+            break
+
+    }
+  
+    
+    let col 
+    switch(values.lF){
+        case 220: col = 0
+        break;
+        case 470: col = 1
+        break; 
+        case 1000: col = 2
+        break; 
+    }
+    
+    let row
+    switch(values.cF){
+        case 1: row = 0
+        Ans()
+        break;
+        case 10: row = 1
+        Ans()
+        break; 
+        case 40: row = 2
+        Ans()
+        break; 
+    }
+
+
+    let ans
+
+    let Ans =  ()=>{
+        if(formulaIdx == 0){
+            ans = lookUp_1[row][col]
+        }
+        else if(formulaIdx == 1){
+            ans = lookUp_2[row][col]
+        }
+        else{
+            ans = lookUp_3[row][col]
+        }
+    }
+
+    console.log("row", row, "col", col, "ans", ans)
+
+    return ans
+}
 const Formulas = {  
     
     one_minus_D(D){
         return 1 - D
     },
-    r_load : {
+
+    c_filter : {
+
         vm(values){
-            let ans  = values.vIn * Math.sqrt(2)
+            let ans = Math.sqrt(2) * values.vIn  
+            return Number(ans).toFixed(4)
+        },
+        vpp(values){
+
+            let f = 50
+            let w = 2 * Math.PI * f
+
+            console.log(values)
+            let numerator = ((Math.PI/2) + values.D)
+            let denominator = w * values.R * values.cF;
+            let power = -(numerator / denominator)
+            let val = 1 - (Math.pow(Math.E, power))
+
+
+            let ans = this.vm(values) * val
             return Number(ans).toFixed(4)
         },
         vdc(values){
-            let alpha = values.D
-            let cos = Math.cos(alpha)
-            let onePlusCos = 1 + cos
-            let vmByPI = this.vm(values) / Math.PI
-            let ans = vmByPI * onePlusCos
-            return Number(ans).toFixed(4)
-        },
-        idc(values){
-            let ans = (this.vdc(values)) / values.R
-            return Number(ans).toFixed(4)
-        },
-        vrms(values){
-            let val = (1 / 2) - (values.D / (2 * pie)) + (Math.sin(2 * values.D) / (4 * pie))
-            let ans = this.vm(values) * (Math.sqrt(val)) 
 
-            // console.log("val" , val, "vm", this.vm(values))
-            return Number(ans).toFixed(4)
-        },
-        irms(values){
-            let ans = (this.vrms(values)) / values.R
-            return Number(ans).toFixed(4)
-        },
-        power(values){
-            let ans = (Math.pow(this.irms(values), 2)) * values.R
+            let f = 50
+            let w = 2 * Math.PI * f
 
+
+            let numerator = ((Math.PI/2) + values.D)
+            let denominator = w * values.R * values.cF;
+            let power = -(numerator / denominator)
+            let val = (1/2) + (Math.pow(Math.E, power))
+
+
+            let ans = this.vm(values) * val
             return Number(ans).toFixed(4)
         },
-        s(values){
-            let ans = values.vIn * (this.irms(values)) 
+        vac(values){
+            let ans = this.vpp(values) / ( 2 * Math.sqrt(2))
             return Number(ans).toFixed(4)
         },
-        pf(values){
-            let ans =  (this.power(values)) / (this.s(values)) 
+        i0(values){
+            let ans = this.vdc(values) / values.R
+            return Number(ans).toFixed(4)
+        },
+        rf(values){
+            let ans =  this.vac(values) / this.vdc(values)
             return Number(ans).toFixed(4)
         },
     },
-    rl_load : {
 
-        //vdc idc vrms irms power Is Is1 HF df  pf
-        vm(values){
-            let ans  = values.vIn * Math.sqrt(2)
-            return Number(ans).toFixed(4)
-        },
-        vdc(values){
-            let ans = (  2 * (this.vm(values)) / pie ) * ( Math.cos(values.D))
-            return Number(ans).toFixed(4)
-        },
-        idc(values){
-            let ans = (this.vdc(values)) / values.R
-            return Number(ans).toFixed(4)
-        },
-        vrms(values){
-            let ans = this.vm(values) / (Math.sqrt(2)) 
-            return Number(ans).toFixed(4)
-        },
-
-        //* for irms --> In
-        //In --> Vn and Zn
-        //Vn --> An and Bn
-        //Zn --> 
-
-        
-
-        an(values, idx){
-            let left = (Math.cos(idx + 1) * values.D) / (idx + 1)
-            let right = (Math.cos(idx - 1) * values.D) / (idx - 1)
-
-            let ans = (2 * (this.vm(values)) / pie) * (left - right)
-            return Number(ans).toFixed(4)
-        },
-
-        bn(values, idx){
-            let left = (Math.sin(idx + 1) * values.D) / (idx + 1)
-            let right = (Math.sin(idx - 1) * values.D) / (idx - 1)
-
-            let ans = (2 * (this.vm(values)) / pie) * (left - right)
-            return Number(ans).toFixed(4)
-        },
-
-        vn(values, idx){
-            let val = Math.pow((this.an(values, idx)), 2) + Math.pow((this.bn(values, idx)), 2)
-
-            let ans = Math.sqrt(val)
-            return Number(ans).toFixed(4)
-
-        },
-
-        zn(values, idx){
-            //! w f and l values is  given by mam
-            const f = 50 ,w = 2 * pie * f
-
-            let val = Math.pow(values.R, 2) + Math.pow((idx * w * values.L), 2)
-
-            let ans = Math.sqrt(val)
-            return Number(ans).toFixed(4)
-
-        },
-
-        in(values, idx){
-            let ans = this.vn(values, idx) / this.zn(values, idx) 
-            return Number(ans).toFixed(4)
-        },
-
-        irms(values){
-            let right = 0
-            for(let idx = 2; idx <= 6; idx += 2){
-                right += Math.pow((this.in(values, idx) / Math.sqrt(2)), 2)
+    lc_filter: {
+        v0(values){
+            console.log("working")
+            // let val = getVal(0)
+            let val = 10
+          
+            if(values.vIn == 220){
+                ans = val
             }
-            let left = Math.pow((this.idc(values)), 2) 
+            else{
+                ans = val * (values.vIn / 220)
+            }
             
-            let val = left + right
-            let ans = Math.sqrt(val)
             return Number(ans).toFixed(4)
         },
-        power(values){
-            let ans = (Math.pow(this.irms(values), 2)) * values.R
+        vpp(values){
+            let val = getVal(1)
+          
+            if(values.vIn == 220){
+                ans = val
+            }
+            else{
+                ans = val * (values.vIn / 220)
+            }
+            
             return Number(ans).toFixed(4)
         },
-        is(values){
-            let ans = this.idc(values)
-            return Number(ans).toFixed(4)
-        },
-        is1(values){
-            let ans =  ((2 * (Math.sqrt(2))) * this.idc(values) ) / pie  
-            return Number(ans).toFixed(4)
-        },
-        hf(values){
-            let ans =  0.483
-            return Number(ans).toFixed(4)
-        },
-        df(values){
-            let ans =  Math.cos(-(values.D))
-            return Number(ans).toFixed(4)
-        },
-        pf(values){
-            let ans =  ((2 * (Math.sqrt(2))) / pie )* Math.cos(values.D)
+        rf(values){
+            let val = getVal(2)
+          
+            if(values.vIn == 220){
+                ans = val
+            }
+            else{
+                ans = val * (values.vIn / 220)
+            }
+            
             return Number(ans).toFixed(4)
         },
     },
+
 }
-//* vIn is Vac , D is firing angle , R is resistance
-// L is the L
+//* D is alpha , vIn is vs, R is r
+// L is inductance , lF is l filter value , cF is c filter value
+
 let values = {
     vIn:0,
     D:0,
-    dVal: 0,
     R:0,
     L:0,
+    lF:0,
+    cF:0,
 }
 
-
-//L  is 
-function updateValues(vIn=0,D=0,R=0,L=0){
+function updateValues(vIn,D,R,L,lF=0, cF=0){
     values = {
         vIn:vIn,
         // convert alpha to radion
-        D:D * (pie / 180),
-        dVal: D,
+        D: (D * (pie/180)),
         R:R,
         L:L,
+        lF:lF,
+        cF:cF,
     }
 }

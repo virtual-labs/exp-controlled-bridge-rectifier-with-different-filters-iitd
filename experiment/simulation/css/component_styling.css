@@ -36,7 +36,7 @@
 }
 .part3_table_one table thead tr th{
     width: 70px;
-    padding: 5px 0;
+    padding: 5px;
 }
 .part3_table_one table tbody tr,td{
     height: 10px!important;
@@ -56,7 +56,6 @@
 
 /* Color change different */
 .part3_table_one table th{
-    font-family: "Cambria Math", Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #c55a11;
     color: white;
 }
@@ -184,9 +183,9 @@
 
 /* part3  table */
 .part3_table_three{
-    width: 600px;
+    width: 560px;
     display: none;
-    bottom: -20px;
+    bottom: 0px;
     position: absolute;
     text-align: center;
     gap: 20px;
@@ -194,74 +193,39 @@
 }
 .part3_table_three td,tr,th{
     border: 1px solid black;
-    font-size: 15px;
 }
 .part3_table_three thead{
-    font-family: "Cambria Math", Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #cc0099;
-    text-shadow: 0.5px 0.8px black;
-    /* font-style: italic; */
+    background-color: #c55a11;
     color: white;
 }
 .part3_table_three thead tr th{
-    padding: 7px 4px;
-    width: 368px;
-    font-size: 14px;
-    letter-spacing: 1px;
+    width: 64px;
 }
 .part3_table_three tbody tr{
-    height: 26px;
+    height: 24px;
 }
 .part3_table_three td{
     text-align: center;
     font-weight: bold;
 }
-.part3_table_three tbody tr:nth-child(1){
+/* .part3_table_three td:nth-child(2){
     background-color: rgb(194, 194, 194);
 }
-.part3_table_three tbody tr:nth-child(3){
-    background-color: rgb(194, 194, 194);
-}
-.part3_table_three tbody tr:nth-child(5){
-    background-color: rgb(194, 194, 194);
-}
-.part3_table_three tbody tr:nth-child(7){
-    background-color: rgb(194, 194, 194);
-}
-
-/* .part3_table_three td:nth-child(3){
+.part3_table_three td:nth-child(3){
     background-color: rgb(194, 194, 194);
 }
 .part3_table_three td:nth-child(4){
     background-color: rgb(194, 194, 194);
-} */
-/* .part3_table_three td:nth-child(10){
+}
+.part3_table_three td:nth-child(10){
     background-color: #ffff00;
 }
 .part3_table_three td:nth-child(11){
     background-color: #ffc000;
 } */
-.part3_table_three_two th:nth-child(n+9){
-    background-color: #0070c0!important;
-}
 .part3_table_three td:nth-child(12){
     display: none;
 }
-.part3_table_three_two th{
-    font-size: 11px!important;
-    padding: 0 1px!important;
-}
-.part3_table_three_two{
-    bottom: -12px;
-}
-.part3_table_three_two thead{
-    font-family: "Cambria Math", Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #cc0099;
-    color: white;
-}
-/* .part3_table_three_two thead:first-child + td + td + td + td+ td {
-    background-color: #0070c0!important;
-} */
 /* table four */
 .part3_table_four{
     display: none;
@@ -289,7 +253,9 @@
     text-align: center;
     font-weight: bold;
 }
-
+.part3_table_three_two thead tr th{
+    width: 78px;
+}
 /* part 4 two */
 /* table four */
 .part3_table_four_2{
@@ -338,20 +304,37 @@
 .graph_box{
     display: none;
     padding: 0 0 22px 22px;
-    width: 368px;
-    height: 295px;
+    width: 366px;
+    height: 289px;
     position: absolute;
-    right: 5px;
-    top: 60px;
+    left: 571px;
+    top: 90px;
     box-sizing: border-box;
     background-color: white;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     box-shadow: 2px 2px 4px;    
+}
+
+.graph_box_step1{
+    left: 571px;
+    top: 90px;
+    width: 366px;
+    height: 289px;
+}
+.graph_box_step2{
+    border-radius: 16px;
+    left: 419px;
+    top: 210px;
+    width: 522px;
+    height: 231px;
 }
 
 .graph{
     /* background-color: white; */
     padding: 5px;
+    height: 100%;
+    width: 100%;
     /* background-color: #202020; */
     display: none;
 }
@@ -597,6 +580,110 @@
     top: 20px; */
   }
 
+
+
+/*! new edited vertex */
+
+    #vertex1  {
+        left: calc(267px - 8px );
+        top: calc(215px + 20px) ;
+    }
+    #vertex2  {
+        left: calc(267px - 9px);
+        top: calc(258px ) ;
+    }
+
+
+    #vertex3 {
+        left: calc(316px + 22px);
+        top:  calc(189px - 8px) ;
+    }
+    #vertex4 {
+        left: calc(317px + 22px);
+        top:  calc(257px + 49px) ;
+    }
+
+
+    #vertex5 {
+        left: calc(316px + 69px );
+        top:  calc(189px - 8px) ;
+    }
+    #vertex6 {
+        left: calc(317px + 68px );
+        top:  calc(257px + 49px) ;
+    }
+
+
+    #vertex7  {
+        left: calc(267px - 8px  + 252px);
+        top: calc(215px + 20px - 7px) ;
+    }
+    #vertex8  {
+        left: calc(267px - 9px + 342px);
+        top: calc(258px ) ;
+    }
+
+
+    #vertex9 {
+        left: calc(662px - 17px);
+        top:  calc(219px - 110px) ;
+    }
+
+
+
+    #vertex10 {
+        left: calc(662px - 17px + 140px );
+        top:  calc(219px - 110px) ;
+    }
+    #vertex11 {
+        left: calc(662px - 17px + 140px );
+        top:  calc(219px - 34px ) ;
+    }
+    #vertex12 {
+        left: calc(662px - 17px + 140px );
+        top:  calc(219px - 34px + 78px) ;
+    }
+    #vertex13 {
+        left: calc(662px - 17px + 140px );
+        top:  calc(219px - 34px + 78px + 77px) ;
+    }
+
+
+
+    #vertex14 {
+        left: calc(662px - 17px + 140px + 98px );
+        top:  calc(219px - 111px) ;
+    }
+    #vertex15 {
+        left: calc(662px - 17px + 140px + 96px );
+        top:  calc(219px - 111px + 44px) ;
+    }
+    #vertex16 {
+        left: calc(662px - 17px + 140px + 97px );
+        top:  calc(219px - 111px + 44px + 200px) ;
+    }
+    #vertex17 {
+        left: calc(662px - 17px + 140px + 97px );
+        top:  calc(219px - 111px + 44px + 235px) ;
+    }
+
+    /* new added for second step */
+
+    #vertex18 {
+        left: calc(662px - 17px);
+        top:  calc(219px - 110px - 52px) ;
+    }
+    #vertex19 {
+        left: calc(662px - 17px + 140px );
+        top:  calc(219px - 110px - 52px) ;
+    }
+
+
+
+
+  
+    
+
 .vertex-box .text{
     position: relative;
     font-size: 20px;
@@ -631,20 +718,21 @@
 /* ! conclusion class */
 .conclusion{
     opacity: 0;
+    /* width: 600px; */
     font-size: 16.5px;
-    background-color: #006600!important;
-    color: white;
+    background-color: #ffe7e7!important;
+    color: blue;
+    font-weight: bold;
     border-radius: 14px;
-    border: 4px solid #6a006a!important;
+    border: 5px solid #ffc000!important;
+    /* box-shadow: -8px -8px 10px #f0bd95!important; */
     padding: 8px;
+    /* top: 100px; */
     height: auto;
-    width: 148px!important;
-    text-align: left !important;
-    left: 422px;
-    top: -62px!important;;
+    left: 3px;
+    top:-10px;
+    width: 210px;
     z-index: 1;
-    box-shadow: 0 0px 7px 4px #eabd9a;
-    font-family:  Calibri ;
 }
 
 /*! to make image pointing */
@@ -657,9 +745,9 @@
 }
 .load-deactive{
     cursor: not-allowed;
+    opacity: 0.4!important;
 }
 .btn-img{
-    cursor: pointer;
     transition: 0.05s;
     z-index: 5000;
 }
@@ -669,180 +757,4 @@
 }
 .btn-img:active{
     filter: drop-shadow(0px 0px 0px black);
-}
-
-/* Components points */
-
-#vertex1{
-    left: 78px;
-    top: -44px;
-}
-#vertex2{
-    left: 79.5px;
-    top: 46px;
-}
-
-
-#vertex3{
-    left: calc(10px +  78px + 71px );
-    top:  calc(-44px + 10px);
-}
-#vertex4{
-    left: calc(10px +  79.5px + 71px) ;
-    top: calc(46px - 10px);
-}
-
-
-#vertex5{
-    left: calc(10px +  78px + 75px + 70px );
-    top:  calc(-44px + 10px);
-}
-#vertex6{
-    left: calc(10px +  79.5px + 75px + 70px) ;
-    top: calc(46px - 10px);
-}
-
-#vertex7{
-    left: calc(20px +  78px + 75px + 70px + 72px );
-    top:  calc(-44px + 10px - 3px);
-}
-#vertex8{
-    left: calc(20px +  79.5px + 75px + 70px + 70px) ;
-    top: calc(46px - 10px + 3px);
-}
-
-#vertex9{
-    left: calc(20px +  78px + 75px + 70px + 72px + 78px );
-    top:  calc(-44px + 10px - 3px);
-}
-#vertex10{
-    left: calc(20px +  79.5px + 75px + 70px + 70px + 79px) ;
-    top: calc(46px - 10px + 3px);
-}
-
-#vertex11{
-    left: calc(20px +  78px + 75px + 70px + 72px + 78px  + 79.5px);
-    top:  calc(-44px + 10px - 3px);
-}
-#vertex12{
-    left: calc(20px +  79.5px + 75px + 70px + 70px + 79px + 80px) ;
-    top: calc(46px - 10px + 3px);
-}
-
-#vertex13{
-    left: calc(20px +  78px + 75px + 70px + 72px + 78px  + 79.5px + 80px);
-    top:  calc(-44px + 10px - 3px);
-}
-#vertex14{
-    left: calc(20px +  79.5px + 75px + 70px + 70px + 79px + 80px + 80px);
-    top: calc(46px - 10px + 3px);
-}
-
-/* circuit points */
-
-#vertex15{
-    left: calc(45px + 78px + 12px);
-    top:  calc(-44px + 250px) ;
-}
-#vertex16{
-    left: calc(45px + 79.5px + 12px);
-    top: calc(46px + 260px);
-}
-
-#vertex17{
-    left: calc(45px + 78px + 12px + 50px);
-    top:  calc(-44px + 250px + 18px) ;
-}
-#vertex18{
-    left: calc(45px + 79.5px + 12px + 49px);
-    top: calc(46px + 260px - 18px);
-}
-
-#vertex19{
-    left: calc(45px + 78px + 12px + 50px + 69px);
-    top:  calc(-44px + 250px + 18px) ;
-}
-#vertex20{
-    left: calc(45px + 79.5px + 12px + 49px + 67px);
-    top: calc(46px + 260px - 18px);
-}
-
-#vertex21{
-    left: calc(45px + 300px + 48px );
-    top:  calc(-44px + 10px - 3px + 168px);
-}
-#vertex22{
-    left: calc(45px + 300px + 47px ) ;
-    top: calc(46px - 10px + 3px + 140px);
-}
-
-#vertex23{
-    left: calc(45px + 300px + 48px + 78px);
-    top:  calc(-44px + 10px - 3px + 168px);
-}
-#vertex24{
-    left: calc(45px + 300px + 47px + 78px);
-    top: calc(46px - 10px + 3px + 140px);
-}
-
-#vertex25{
-    left: calc(45px + 300px + 48px );
-    top:  calc(-44px + 10px - 3px + 168px + 200px);
-}
-#vertex26{
-    left: calc(45px + 300px + 47px ) ;
-    top: calc(46px - 10px + 3px + 140px + 200px);
-}
-
-#vertex27{
-    left: calc(45px + 300px + 48px + 78px);
-    top:  calc(-44px + 10px - 3px + 168px + 200px);
-}
-#vertex28{
-    left: calc(45px + 300px + 47px + 79px) ;
-    top: calc(46px - 10px + 3px + 140px + 200px);
-}
-
-
-
-/*! styling for EE15 table */
-.table-header{
-    width: 282px;
-    padding: 4px;
-    background-color: #d60093;
-    color: white;
-    font-size: 1.3rem;
-    border: 1px solid white;
-    font-weight: bold;
-}
-.table-cell{
-    width: 90px;
-    padding: 4px 10px;
-    color: black;
-    background-color: #cfd5ea;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    margin-top: 3px;
-}
-
-.table-1{
-    background-color: #d60093;   
-}
-
-.table-2 , .table-3{
-    background-color: #0000ff;   
-}
-
-.table-3 {
-    width: 180px!important;
-}
-
-.table-3-row .table-cell{
-    width: 87px!important;
-}
-
-.table_resistance, .table_inductor, .table_ripple_factor{
-    display: none;
-    position: absolute;
 }

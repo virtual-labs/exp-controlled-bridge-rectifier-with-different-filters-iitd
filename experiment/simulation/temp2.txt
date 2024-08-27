@@ -1,46 +1,22 @@
-vin arrow
-Dom.setBlinkArrowRed(true,60,-45,30,null,-90).play()
+v
+Dom.setBlinkArrowRed(true,56, 4,30,null,-90)
+load
+Dom.setBlinkArrowRed(true,495, 4,30,null,-90)
+0deg
+Dom.setBlinkArrowRed(true,699, 28,30,null,90)
+	Dom.setBlinkArrowRed(true,684, 14,30,null,-90)
+		Dom.setBlinkArrowRed(true,684, 72,30,null,-90)
+		Dom.setBlinkArrowRed(true,784, 72,30,null,-90)
+		Dom.setBlinkArrowRed(true,878, 72,30,null,-90)
+	
+	Dom.setBlinkArrowRed(true,784, 14,30,null,-90)
 
-firing angle 
-Dom.setBlinkArrowRed(true,400,12,30,null,90).play()
+	Dom.setBlinkArrowRed(true,878, 14,30,null,-90)
+plot
+Dom.setBlinkArrowRed(true,679, 132,30,null,-90)
 
-record
-Dom.setBlinkArrowRed(true,35,352,30,null,-90).play()
-
-reset
-Dom.setBlinkArrowRed(true,135,352,30,null,-90).play()
-
-delete
-Dom.setBlinkArrowRed(true,235,352,30,null,-90).play()
-
-buttons
-vdc	    Dom.setBlinkArrowRed(true,640,65,30,null,90)
-idc	    Dom.setBlinkArrowRed(true,722,65,30,null,90)
-vrms	Dom.setBlinkArrowRed(true,798,65,30,null,90)
-irms	Dom.setBlinkArrowRed(true,874,65,30,null,90)
-p	    Dom.setBlinkArrowRed(true,640,138,30,null,90)
-df	    Dom.setBlinkArrowRed(true,722,138,30,null,90)
-hf	    Dom.setBlinkArrowRed(true,798,138,30,null,90)
-pf	    Dom.setBlinkArrowRed(true,874,138,30,null,90)
-
-
-Project Tasks
-    0 Get all arrow left,top,height,width
-    1 Create Sliders
-    2 Step Tutorial
-    3 Graph Errors fix
-    4 Record btns
-    5 Delete and reset btns
-    6 Formulas 
-
-
-
-
-
-
-
-
-
-
-
-
+graph items
+Dom.setBlinkArrowRed(true,335, 251,30,null,180)
+Dom.setBlinkArrowRed(true,309, 251,30,null,180)
+Dom.setBlinkArrowRed(true,368, 251,30,null,180)
+	

@@ -9,6 +9,13 @@ body{
     position: relative;
     z-index: 20;
 }
+.universal-slider .slider-bcg{
+    height: 100px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    z-index: 20;
+}
 .slider .slider_R,.range-slider{
     position: absolute;
     left: 473px;
