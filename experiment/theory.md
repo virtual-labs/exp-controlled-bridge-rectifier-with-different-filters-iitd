@@ -144,7 +144,7 @@ Average load current is given by
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th11.png" height="60px">
+  <img src="images/th11.png" height="70px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(2)
@@ -157,7 +157,7 @@ where,<br>
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th12.png" height="70px">
+  <img src="images/th12.png" height="45px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(3)
@@ -170,7 +170,7 @@ The peak-to-peak ripple in output voltage is given by
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th13.png" height="60px">
+  <img src="images/th13.png" height="130px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(4)
@@ -183,7 +183,7 @@ The peak-to-peak ripple in output voltage is given by
 </div><br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th14.png" height="50px">
+  <img src="images/th14.png" height="76px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(5)
@@ -196,7 +196,7 @@ The ripple factor is given by
 </div><br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th15.png" height="50px">
+  <img src="images/th15.png" height="76px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(6)
@@ -211,7 +211,7 @@ If the firing angle of controlled rectifier with C-filter is less than the criti
 
 <div style="float: left; width:100%;"><br>
 <center>
-  <img src="images/th16.png" height="220px">
+  <img src="images/th16.png" height="240px">
   
 <br>Fig. 6. Output load voltage with and without capacitor filter.
 
@@ -233,7 +233,7 @@ Various mathematical expressions are given below to quantify the rectifier perfo
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th17.png" height="60px">
+  <img src="images/th17.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(7)
@@ -247,7 +247,7 @@ The peak-to-peak ripple in output voltage is given by
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th18.png" height="60px">
+  <img src="images/th18.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(8)
@@ -263,7 +263,7 @@ The ripple factor is given by
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th19.png" height="60px">
+  <img src="images/th19.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(9)
