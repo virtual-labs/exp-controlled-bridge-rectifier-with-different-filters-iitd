@@ -68,3 +68,54 @@ Typical waveforms for controlled bridge rectifier with C-filter is given in Fig.
 
 </table>
 <br>
+
+<div style="float: left; width:100%;"><br>
+Fig. 4. Typical waveforms for controlled rectifier with C-Filter (a) α = 0&#176;, (b) α = 30&#176; and (c) α = 60&#176;.
+<br><br>
+
+<br>Typical waveforms for controlled bridge rectifier with LC-filter is given in Fig. 5<br>
+
+<table border="0" align="center" style="width:100%; border:none;">
+  <tr>
+<td style="width:50%">
+<center>
+
+<img src="images/th7.png" height="450px;">
+<br><br>
+(a)
+<br><br>
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+
+<img src="images/th8.png" height="450px;">
+<br><br>
+(b)
+<br><br>
+</center> 
+    </td>
+  </tr>
+  <tr>
+<td colspan="2" style="width:100%">
+<center>
+
+<img src="images/th9.png" height="450px;">
+<br><br>
+(c)
+<br><br>
+</center>
+</td>
+  </tr>
+
+</table>
+<br>
+
+<div style="float: left; width:100%;"><br>
+Fig. 5. Typical waveforms for controlled rectifier with L-C-Filter (a) α = 0&#176;, (b) α = 30&#176; and (c) α = 60&#176;.
+<br><br>
+
+</div>
+
+#### C-Filter<br>
