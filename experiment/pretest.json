@@ -3,7 +3,7 @@
   "questions": [
     {
 
-      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pre1.png' height='300px'><br>(a)<br><img src='images/pre2.png' height='300px'>(b)<br><br>Fig. 1. Circuit configuration of Single-Phase controlled Rectifier with (a) C-Filter, and (b) L-C-Filter</center><br><br> 1. What is the primary role of capacitor filter in a controlled rectifier?",
+      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pre1.png' height='300px'><br>(a)<br><img src='images/pre2.png' height='300px'><br>(b)<br>Fig. 1. Circuit configuration of Single-Phase controlled Rectifier with (a) C-Filter, and (b) L-C-Filter</center><br><br> 1. What is the primary role of capacitor filter in a controlled rectifier?",
       "answers": {        
         "a": "Increases the output voltage",
         "b": "Reduces the ripple in the DC output voltage",
