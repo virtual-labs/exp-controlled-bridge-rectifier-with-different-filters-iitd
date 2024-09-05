@@ -331,6 +331,8 @@ const
 
 
 textToSpeach = (text,speak=true) => {
+  // for filter <sub></sub>
+  text = text.replaceAll("<sub>"," ").replaceAll("</sub>"," ")
   let utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
   utterance.voice = window.speechSynthesis.getVoices()[0];
@@ -1626,6 +1628,7 @@ concept_development: new Dom(".concept_development"),
 
             var exampleEndpoint1 = setEndPoint()
             var exampleEndpoint2 = setEndPoint(2)
+            var exampleEndpointBlack = setEndPoint(1,"000000")
           
 
 
@@ -1649,12 +1652,12 @@ concept_development: new Dom(".concept_development"),
               instance.addEndpoint(
                 "vertex2",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
               instance.addEndpoint(
                 "vertex4",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
 
               //conn 3
@@ -1673,13 +1676,13 @@ concept_development: new Dom(".concept_development"),
               instance.addEndpoint(
                 "vertex6",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
 
               instance.addEndpoint(
                 "vertex8",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
               
               //conn 5
@@ -1712,13 +1715,13 @@ concept_development: new Dom(".concept_development"),
               instance.addEndpoint(
                 "vertex12",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
 
               instance.addEndpoint(
                 "vertex13",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
               
               //conn 8
@@ -1738,13 +1741,13 @@ concept_development: new Dom(".concept_development"),
               instance.addEndpoint(
                 "vertex16",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
 
               instance.addEndpoint(
                 "vertex17",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
            
             }
@@ -1792,7 +1795,9 @@ concept_development: new Dom(".concept_development"),
       }
 
       // calling cable function
-      cable()
+      setTimeout(() => {
+        cable()
+      }, 3300);
       
       // ------ end
 
@@ -2082,6 +2087,7 @@ concept_development: new Dom(".concept_development"),
 
             var exampleEndpoint1 = setEndPoint()
             var exampleEndpoint2 = setEndPoint(2)
+            var exampleEndpointBlack = setEndPoint(1,"000000")
           
 
 
@@ -2105,12 +2111,12 @@ concept_development: new Dom(".concept_development"),
               instance.addEndpoint(
                 "vertex2",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
               instance.addEndpoint(
                 "vertex4",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
 
               //conn 3
@@ -2129,13 +2135,13 @@ concept_development: new Dom(".concept_development"),
               instance.addEndpoint(
                 "vertex6",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
 
               instance.addEndpoint(
                 "vertex8",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
               
               //conn 5
@@ -2168,13 +2174,13 @@ concept_development: new Dom(".concept_development"),
               instance.addEndpoint(
                 "vertex12",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
 
               instance.addEndpoint(
                 "vertex13",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
               
               //conn 8
@@ -2455,12 +2461,14 @@ concept_development: new Dom(".concept_development"),
         
         Scenes.optionsDone[0]=1;
         Scenes.forMathematicalExpressionBtn = 1
+        Scenes.currentStep = 8
         Scenes.steps[0+6]()
       }
       const opTwo = ()=>{
       
         Scenes.optionsDone[1]=1;
         Scenes.forMathematicalExpressionBtn = 2
+        Scenes.currentStep = 9
         Scenes.steps[1+6]()
       }
 
@@ -2608,7 +2616,8 @@ concept_development: new Dom(".concept_development"),
       let resistanceValue = 0
       let inductanceValue = 0
       let capacitance = 0
-      let criticalValue = 20 // Todo update with formula
+      // let criticalValue = 20 // Todo update with formula
+      let criticalValue = 0
       let isLoadAndInductanceSelected = false
       let isCapacitanceSelected = false
 
@@ -2652,7 +2661,8 @@ concept_development: new Dom(".concept_development"),
           setCC("Press record button")
 
           capacitance = vals_value[idx]
-
+          updateValues(vInValue,dutyRatioValue,resistanceValue,inductanceValue,0,capacitance)
+          criticalValue = Number(Formulas.c_filter.ac(values)).toFixed(1)
           ciriticalValueTempTitle.show().setContent(`${criticalValue}`)
 
           vals_f.forEach(val_f=>val_f.hide())
@@ -2707,6 +2717,13 @@ concept_development: new Dom(".concept_development"),
       Scenes.items.graph_box_3.addClass("graph_box_step1")
       Scenes.items.graph_box_4.addClass("graph_box_step1")
       Scenes.items.graph_box_5.addClass("graph_box_step1")
+
+      Scenes.items.graph_box_0.removeClass("graph_box_step2")
+      Scenes.items.graph_box_1.removeClass("graph_box_step2")
+      Scenes.items.graph_box_2.removeClass("graph_box_step2")
+      Scenes.items.graph_box_3.removeClass("graph_box_step2")
+      Scenes.items.graph_box_4.removeClass("graph_box_step2")
+      Scenes.items.graph_box_5.removeClass("graph_box_step2")
       
       let dataLabelX = "Firing angle (α)"
       
@@ -2856,8 +2873,8 @@ concept_development: new Dom(".concept_development"),
             arrows: [
               ()=>Dom.setBlinkArrowRed(true,739,-23,30,null,-90).play(),
               ()=>Dom.setBlinkArrowRed(true,862,-23,30,null,-90).play(),
-              ()=>Dom.setBlinkArrowRed(true,756,17,30,null,-90).play(),
-              ()=>Dom.setBlinkArrowRed(true,827,17,30,null,-90).play(),
+              ()=>Dom.setBlinkArrowRed(true,648,17,30,null,-90).play(),
+              ()=>Dom.setBlinkArrowRed(true,829,17,30,null,-90).play(),
             ],
             texts: [
               "Here, the DC output load voltage is constant for firing angle less then critical value while it starts decreasing with firing angles more than critical value.",
@@ -2934,13 +2951,16 @@ concept_development: new Dom(".concept_development"),
               // rightTicks[idx].set()
               if(idx < btns.length - graphIdx - 1){
                 subtitles.arrows[idx]()
-                // setCC(subtitles.texts[idx])
+                setCC(subtitles.texts[idx])
               }else{
                 subtitles.lastButtonFunction()
               }
               let yLabel = Scenes.items.chart.label[idx].y
               Scenes.items.yLabel.setContent(yLabel)
               Scenes.items.xLabel.setContent(dataLabelX)
+
+              // ! download button anime
+              Download.playDownloadButtonAnime()
             }
             // btns_f[idx].show()
             btns_f[idx].item.onclick = btn.item.onclick
@@ -3387,6 +3407,12 @@ concept_development: new Dom(".concept_development"),
       Scenes.items.graph_box_6.addClass("graph_box_step2")
       Scenes.items.graph_box_7.addClass("graph_box_step2")
       Scenes.items.graph_box_8.addClass("graph_box_step2")
+
+      Scenes.items.graph_box_0.removeClass("graph_box_step1")
+      Scenes.items.graph_box_6.removeClass("graph_box_step1")
+      Scenes.items.graph_box_7.removeClass("graph_box_step1")
+      Scenes.items.graph_box_8.removeClass("graph_box_step1")
+
       let dataLabelX = "C<sub>f</sub> (µF)"
       let styles = {
         color: "black",
@@ -3439,10 +3465,13 @@ concept_development: new Dom(".concept_development"),
           ]
           let n = 3
           for(let k=0;k<n;k++){
+            let count=0;
             for(let i=0;i<n;i++){
               let values = []
-              for(let j=i;j<= i+(n*2);j+=n){
-                values.push( tableRows[j].cells[col_idx_forumlas[i]].innerHTML )
+              // for(let j=i;j<= i+(n*2);j+=n){
+              for(let j=0;j<n;j++){
+                console.log(`k: ${k}, count: ${count}, i: ${i}, j: ${j}, col_idx: ${col_idx_forumlas[k]},`)
+                values.push( tableRows[count++].cells[col_idx_forumlas[k]].innerHTML )
               }
               vals[k][i] = values
             }
@@ -3563,6 +3592,9 @@ concept_development: new Dom(".concept_development"),
               let yLabel = Scenes.items.chart.label[idx + graphIdx].y
               Scenes.items.yLabel.setContent(yLabel)
               Scenes.items.xLabel.setContent(dataLabelX)
+
+              // ! download button anime
+              Download.playDownloadButtonAnime()
             }
           }) 
         }
@@ -3750,9 +3782,9 @@ concept_development: new Dom(".concept_development"),
         tableRow.cells[1].innerHTML = vInValue
         tableRow.cells[2].innerHTML = lFilterValue
         tableRow.cells[3].innerHTML = cFilterValue
-        tableRow.cells[4].innerHTML = 10
-        tableRow.cells[5].innerHTML = 20
-        tableRow.cells[6].innerHTML = 30
+        tableRow.cells[4].innerHTML = Number(Formulas.lc_filter.v0(values)).toFixed(2)
+        tableRow.cells[5].innerHTML = Number(Formulas.lc_filter.vpp(values)).toFixed(2)
+        tableRow.cells[6].innerHTML = Number(Formulas.lc_filter.rf(values)).toFixed(2)
 
 
         // tableRow.cells[8].innerHTML = Number(Formulas.part_3.iT_rms(values)).toFixed(2)
@@ -3795,6 +3827,23 @@ concept_development: new Dom(".concept_development"),
     //   // setIsProcessRunning(true);
     // }),
   ],
+  // ! For adding realcurrentstep in every step
+  // ! For tracking the current step accuratly
+  realCurrentStep: null,
+  setRealCurrentStep(){
+    let count = 0
+    this.steps.forEach((step,idx) => {
+      const constCount = count
+      let newStep = () => {
+        this.realCurrentStep = constCount;
+        console.log(`RealCurrentStep: ${this.realCurrentStep}`)
+        return step();
+      };
+
+      count++;
+      this.steps[idx] = newStep
+    });
+  },
   back() {
     //! animation isRunning
     // if (isRunning) {
@@ -3811,6 +3860,9 @@ concept_development: new Dom(".concept_development"),
     }
   },
   next() {
+    if(!this.realCurrentStep){
+      Scenes.setRealCurrentStep()
+    }
     //! animation isRunning
     if (isRunning) {
       return
