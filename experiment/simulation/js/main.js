@@ -2200,13 +2200,13 @@ concept_development: new Dom(".concept_development"),
               instance.addEndpoint(
                 "vertex16",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
 
               instance.addEndpoint(
                 "vertex17",
                 { anchor: [0.75, 0, 0, -1] },
-                exampleEndpoint1
+                exampleEndpointBlack
               );
 
               //conn 9
@@ -3585,7 +3585,7 @@ concept_development: new Dom(".concept_development"),
               // rightTicks[idx].set()
               if(idx < btns.length - 1){
                 subtitles.arrows[idx]()
-                // setCC(subtitles.texts[idx])
+                setCC(subtitles.texts[idx])
               }else{
                 subtitles.lastButtonFunction()
               }
