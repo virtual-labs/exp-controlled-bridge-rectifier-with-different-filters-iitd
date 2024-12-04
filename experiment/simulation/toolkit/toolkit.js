@@ -247,7 +247,7 @@ setTimeout(() => {
 $(document).ready(function () {
   // TODO uncomment
   Download.init();
-  // Download.toggleSpinner()
+  Download.toggleSpinner()
 
   window.onbeforeprint = () => {
     Dom.setBlinkArrowRed(-1);

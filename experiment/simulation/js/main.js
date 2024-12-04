@@ -1111,6 +1111,34 @@ btn_reset_connections: new Dom(".btn-connections"),
       option_2_tab_1 : new Dom("option_2_tab_1"),
       option_2_tab_2 : new Dom("option_2_tab_2"),
       option_2_tab_3 : new Dom("option_2_tab_3"),
+
+          // experimental section images added
+
+    beta_line_blinking: new Dom("beta_line_blinking"),
+    bnt_click: new Dom("bnt_click"),
+    btn_firing_angle: new Dom("btn_firing_angle"),
+    btn_input_voltage: new Dom("btn_input_voltage"),
+    btn_load_inductance: new Dom("btn_load_inductance"),
+    btn_load_resistance: new Dom("btn_load_resistance"),
+    circle: new Dom("circle"),
+    components_rl_load: new Dom("components_rl_load"),
+    components_r_load: new Dom("components_r_load"),
+    rl_load_click_1: new Dom("rl_load_click_1"),
+    rl_load_click_2: new Dom("rl_load_click_2"),
+    rl_load_click_3: new Dom("rl_load_click_3"),
+    rl_load_click_4: new Dom("rl_load_click_4"),
+    r_load_click_1: new Dom("r_load_click_1"),
+    r_load_click_2: new Dom("r_load_click_2"),
+    r_load_click_3: new Dom("r_load_click_3"),
+    r_load_click_4: new Dom("r_load_click_4"),
+    val_a: new Dom("val_a"),
+    val_l: new Dom("val_l"),
+    val_r: new Dom("val_r"),
+    val_v: new Dom("val_v"),
+    btn_c_filter: new Dom("btn_c_filter"),
+    btn_lc_filter: new Dom("btn_lc_filter"),
+    val_c: new Dom("val_c"),
+    val_lc: new Dom("val_lc"),
     
 
 
@@ -2388,17 +2416,18 @@ concept_development: new Dom(".concept_development"),
         
       })
 
+      return true
     }),
 
     //! select option
     (step5 = function () {
       setIsProcessRunning(true);
-      Scenes.items.btn_next.show()
       
       // todo all previous elements hide
       Dom.hideAll();
       Scenes.items.contentAdderBox.item.innerHTML = ""
-
+      
+      Scenes.items.btn_next.show()
       
       // * remove all previous restrictions
       
@@ -2494,8 +2523,10 @@ concept_development: new Dom(".concept_development"),
 
       if(exit){
         // after complete
-        // Dom.setBlinkArrow(true, 790, 408).play();
-        setCC("Simulation Done");
+        // setCC("Simulation Done");
+        setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 408).play();
+        Scenes.currentStep = 7
         setIsProcessRunning(false);
         return true
       }
@@ -3011,7 +3042,7 @@ concept_development: new Dom(".concept_development"),
         }
         recordBtnClickIdx = recordBtnClickIdx-1
         if(recordBtnClickIdx < 3){
-          const values = [0, 'φ', 90]
+          const values = [0, '𝜶C', 90]
           rows[recordBtnClickIdx].cells[2].innerHTML = values[recordBtnClickIdx]
         }
         valuesToMatch.pop()
@@ -3030,7 +3061,7 @@ concept_development: new Dom(".concept_development"),
         }
         // reset all the parameters
         rows[0].cells[2].innerHTML = 0
-        rows[1].cells[2].innerHTML = 'φ'
+        rows[1].cells[2].innerHTML = '𝜶C'
         rows[2].cells[2].innerHTML = 90
         // so just simply call this step again
         // sliders.reset()
@@ -3714,7 +3745,7 @@ concept_development: new Dom(".concept_development"),
         }
         // reset all the parameters
         // rows[0].cells[2].innerHTML = 0
-        // rows[1].cells[2].innerHTML = 'φ'
+        // rows[1].cells[2].innerHTML = '𝜶C'
         // rows[2].cells[2].innerHTML = 90
         // so just simply call this step again
         // sliders.reset()
@@ -3814,18 +3845,509 @@ concept_development: new Dom(".concept_development"),
 
 
     }),
-    // ! dummy step
-    // (step5 = function (){
-    //   Scenes.items.part_3_circuit.set(-4, -46, 159)  
-    //   sliders.resetSlidersValue()
-    //   sliders.showAll()
-    //   Scenes.items.part3_table_three.set(10)
-    //   Scenes.setStepHeading(
-    //     "",
-    //     ""
-    //   )
-    //   // setIsProcessRunning(true);
-    // }),
+
+    //! Experimental results section
+
+    //! R LOAD  Waveforms section
+    (step8 = function () {
+      setIsProcessRunning(true);
+      // to hide previous step
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      Scenes.items.slider_box.hide();
+
+      let arrowIdx = 0;
+      let arrows = [
+        () => {
+          Dom.setBlinkArrowRed(true, 648, 67 - 23, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(true, 648, 153 - 23, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(true, 648, 237 - 23, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(true, 648, 322 - 23, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(true, 648, 381, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(-1);
+        },
+      ];
+      arrows[arrowIdx]();
+
+      //* Required items
+      setCC(
+        "To View the experimental waveforms select the parameters and proceed further."
+      );
+
+      Scenes.items.circle.set(322-90, 346, 98).hide();
+      Scenes.items.components_r_load.set(0, -49, 476);
+      Scenes.items.beta_line_blinking.set(104, 134, 196).zIndex(1).hide();
+
+      let btns = [
+        Scenes.items.btn_input_voltage.set(697, 110 - 70, 45).zIndex(1),
+        Scenes.items.btn_load_resistance.set(697, 15 + 110, 45).zIndex(1),
+        Scenes.items.btn_load_inductance.set(697, 25 + 110 + 74, 45).zIndex(1),
+        Scenes.items.btn_firing_angle.set(697, 35 + 110 + 74 + 74, 45).zIndex(1),
+        Scenes.items.btn_c_filter.set(697, 42 + 110 + 74 + 74+74, 45).zIndex(1),
+      ];
+
+      let vals = [
+        Scenes.items.val_v
+          .set(697, 38 + 110 - 70, 45)
+          .zIndex(1)
+          .hide(),
+        Scenes.items.val_r
+          .set(697, 15 + 38 + 110, 45)
+          .zIndex(1)
+          .hide(),
+        Scenes.items.val_l
+          .set(697, 25 + 38 + 110 + 74, 45)
+          .zIndex(1)
+          .hide(),
+        Scenes.items.val_a
+          .set(697, 35 + 38 + 110 + 74 + 74, 45)
+          .zIndex(1)
+          .hide(),
+        Scenes.items.val_c
+          .set(697, 42 + 38 + 110 + 74 + 74 + 74, 45)
+          .zIndex(1)
+          .hide(),
+      ];
+
+      //* To check if all the btns are clicked or not
+      let optionsClick = [0, 0, 0, 0, 0];
+      let btn_see_waveforms = Scenes.items.bnt_click
+        .set(349-90, 378, 43)
+        .zIndex(1);
+
+      //* onclick for each btn
+      btns.forEach((btn, idx) => {
+        btn.item.onclick = () => {
+          arrows[arrowIdx]();
+          vals[idx].show();
+          optionsClick[idx] = 1;
+
+          //* if all btns are clicked then see waveform active
+          if (optionsClick.indexOf(0) == -1) {
+            Scenes.items.circle.show();
+            btn_see_waveforms.item.classList.add("btn-img");
+            let scaleBtn = anime({
+              targets: Scenes.items.bnt_click.item,
+              scale: [1, 1.1],
+              duration: 1000,
+              easing: "linear",
+              loop: true,
+            });
+            btn_see_waveforms.item.onclick = () => {
+              scaleBtn.reset();
+              waveformShow();
+            };
+          }
+        };
+      });
+
+      let scenes = [
+        Scenes.items.r_load_click_1.set(10, -25, 453).hide(),
+        Scenes.items.r_load_click_2.set(10, -25, 453).hide(),
+        Scenes.items.r_load_click_3.set(10, -25, 453).hide(),
+        Scenes.items.r_load_click_4.set(10, -25, 453).hide(),
+      ];
+
+      let waveformShow = () => {
+        vals.forEach((_, idx) => {
+          btns[idx].hide();
+          vals[idx].hide();
+        });
+        Scenes.items.circle.set(580, 346, 93).hide();
+        Scenes.items.bnt_click.hide();
+        Scenes.items.components_r_load.hide();
+
+        Dom.setBlinkArrowRed(true, 555, 96, 30, null, 0).play();
+
+        scenes[0].show();
+        // Scenes.items.beta_line_blinking.show()
+        // anime({
+        //   targets: Scenes.items.beta_line_blinking.item,
+        //   scale: [1, 1.1],
+        //   easing: "easeInOutQuad",
+        //   duration: 2000,
+        //   loop: true
+        //  })
+
+        setCC(
+          "This is the firing pulse pattern given to thyristor and the firing angle is 30 degrees."
+        );
+
+        setTimeout(() => {
+          // setCC("Click 'Next' to go to next step");
+          Dom.setBlinkArrow(true, 790, 415).play();
+          setIsProcessRunning(false);
+        }, 4000);
+      };
+
+      return true;
+    }),
+
+    //! R LOAD  CLICK 2
+    (step9 = function () {
+      setIsProcessRunning(true);
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      Scenes.items.slider_box.hide();
+      // to hide previous step
+      Scenes.items.r_load_click_2.set(15, -30, 444);
+      Dom.setBlinkArrowRed(true, 555, 152, 30, null, 0).play();
+
+      setCC(
+        "To observe the single phase controlled rectifier performance, 100 Volts AC input voltage and 30 degrees firing angle is set."
+      );
+
+      setTimeout(() => {
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 7000);
+
+      //! Required Items
+
+      return true;
+    }),
+
+    //! R LOAD  CLICK 3
+    (step10 = function () {
+      setIsProcessRunning(true);
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      Scenes.items.slider_box.hide();
+
+      // to hide previous step
+      Scenes.items.r_load_click_3.set(15, -30, 444);
+      Dom.setBlinkArrowRed(true, 555, 213, 30, null, 0).play();
+
+      setCC(
+        "Here, the dc load voltage is non-pulsating and its ripple content is low due to the presence of C filter."
+      );
+
+      setTimeout(() => {
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 6000);
+
+      //! Required Items
+
+      return true;
+    }),
+    
+    //! R LOAD  CLICK 4
+    (step11 = function () {
+      setIsProcessRunning(true);
+      // to hide previous step
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      Scenes.items.slider_box.hide();
+
+      Scenes.items.r_load_click_4.set(15, -30, 444);
+      Dom.setBlinkArrowRed(true, 555, 301, 30, null, 0).play();
+
+      setCC(
+        "This is the source current waveform and it is present only when load voltage is less than AC source voltage."
+      );
+
+      setTimeout(() => {
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 8000);
+
+      //! Required Items
+
+      return true;
+    }),
+
+    //! RL LOAD  Waveforms section
+    (step12 = function () {
+      setIsProcessRunning(true);
+      // to hide previous step
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      Scenes.items.slider_box.hide();
+
+      let arrowIdx = 0;
+      let arrows = [
+        () => {
+          Dom.setBlinkArrowRed(true, 648, 67 - 23, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(true, 648, 153 - 23, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(true, 648, 237 - 23, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(true, 648, 322 - 23, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(true, 648, 381, 30, null, 180).play();
+          arrowIdx++;
+        },
+        () => {
+          Dom.setBlinkArrowRed(-1);
+        },
+      ];
+      arrows[arrowIdx]();
+
+      //* Required items
+      setCC(
+        "To View the experimental waveforms select the parameters and proceed further."
+      );
+
+      Scenes.items.circle.set(322-90, 346, 98).hide();
+      Scenes.items.components_rl_load.set(0, -49, 332);
+      Scenes.items.beta_line_blinking.set(104, 134, 196).zIndex(1).hide();
+
+      let btns = [
+        Scenes.items.btn_input_voltage.set(697, 110 - 70, 45).zIndex(1),
+        Scenes.items.btn_load_resistance.set(697, 15 + 110, 45).zIndex(1),
+        Scenes.items.btn_load_inductance.set(697, 25 + 110 + 74, 45).zIndex(1),
+        Scenes.items.btn_firing_angle.set(697, 35 + 110 + 74 + 74, 45).zIndex(1),
+        Scenes.items.btn_lc_filter.set(697, 42 + 110 + 74 + 74+74, 45).zIndex(1),
+      ];
+
+      let vals = [
+        Scenes.items.val_v
+          .set(697, 38 + 110 - 70, 45)
+          .zIndex(1)
+          .hide(),
+        Scenes.items.val_r
+          .set(697, 15 + 38 + 110, 45)
+          .zIndex(1)
+          .hide(),
+        Scenes.items.val_l
+          .set(697, 25 + 38 + 110 + 74, 45)
+          .zIndex(1)
+          .hide(),
+        Scenes.items.val_a
+          .set(697, 35 + 38 + 110 + 74 + 74, 45)
+          .zIndex(1)
+          .hide(),
+        Scenes.items.val_lc
+          .set(697, 42 + 38 + 110 + 74 + 74 + 74, 46)
+          .zIndex(1)
+          .hide(),
+      ];
+
+      //* To check if all the btns are clicked or not
+      let optionsClick = [0, 0, 0, 0, 0];
+      let btn_see_waveforms = Scenes.items.bnt_click
+        .set(349-90, 378, 43)
+        .zIndex(1);
+
+      //* onclick for each btn
+      btns.forEach((btn, idx) => {
+        btn.item.onclick = () => {
+          arrows[arrowIdx]();
+          vals[idx].show();
+          optionsClick[idx] = 1;
+
+          //* if all btns are clicked then see waveform active
+          if (optionsClick.indexOf(0) == -1) {
+            Scenes.items.circle.show();
+            btn_see_waveforms.item.classList.add("btn-img");
+            anime({
+              targets: Scenes.items.bnt_click.item,
+              scale: [1, 1.1],
+              duration: 1000,
+              easing: "linear",
+              loop: true,
+            });
+            btn_see_waveforms.item.onclick = waveformShow;
+          }
+        };
+      });
+
+      let scenes = [
+        Scenes.items.rl_load_click_1.set(10, -25, 453).hide(),
+        Scenes.items.rl_load_click_2.set(10, -25, 453).hide(),
+        Scenes.items.rl_load_click_3.set(10, -25, 453).hide(),
+        Scenes.items.rl_load_click_4.set(10, -25, 453).hide(),
+      ];
+
+      let waveformShow = () => {
+        vals.forEach((_, idx) => {
+          btns[idx].hide();
+          vals[idx].hide();
+        });
+        Scenes.items.circle.set(580, 346, 93).hide();
+        Scenes.items.bnt_click.hide();
+        Scenes.items.components_rl_load.hide();
+
+        Dom.setBlinkArrowRed(true, 555, 10 + 80, 30, null, 0).play();
+
+        scenes[0].show();
+        // Scenes.items.beta_line_blinking.show()
+        // anime({
+        //   targets: Scenes.items.beta_line_blinking.item,
+        //   scale: [1, 1.1],
+        //   easing: "easeInOutQuad",
+        //   duration: 2000,
+        //   loop: true
+        //  })
+
+        setCC(
+          "This is the firing pulse pattern given to thyristor and the firing angle is 30 degrees."
+        );
+        setTimeout(() => {
+          // setCC("Click 'Next' to go to next step");
+          Dom.setBlinkArrow(true, 790, 415).play();
+          setIsProcessRunning(false);
+        }, 4000);
+      };
+
+      return true;
+    }),
+
+    //! RL LOAD  CLICK 2
+    (step13 = function () {
+      setIsProcessRunning(true);
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      Scenes.items.slider_box.hide();
+
+      Scenes.items.rl_load_click_2.set(10, -25, 453);
+      // Scenes.items.beta_line_blinking.set(104, 134, 196).zIndex(1);
+
+      // anime({
+      //   targets: Scenes.items.beta_line_blinking.item,
+      //   scale: [1, 1.1],
+      //   easing: "easeInOutQuad",
+      //   duration: 2000,
+      //   loop: true,
+      // });
+
+      // to hide previous step
+      Dom.setBlinkArrowRed(true, 555, 161, 30, null, 0).play();
+
+      setCC(
+        "To observe the single phase controlled rectifier performance with LC filter,"
+      );
+
+      setCC(
+        " 100 Volts AC input voltage and 30 degrees firing angle is set."
+      );
+
+      setTimeout(() => {
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 9000);
+
+      //! Required Items
+
+      return true;
+    }),
+
+    //! RL LOAD  CLICK 3
+    (step14 = function () {
+      setIsProcessRunning(true);
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      Scenes.items.slider_box.hide();
+
+      // to hide previous step
+
+      Scenes.items.rl_load_click_3.set(10, -25, 453);
+      // Scenes.items.beta_line_blinking.set(104, 134, 196).zIndex(1);
+
+      // anime({
+      //   targets: Scenes.items.beta_line_blinking.item,
+      //   scale: [1, 1.1],
+      //   easing: "easeInOutQuad",
+      //   duration: 2000,
+      //   loop: true,
+      // });
+
+      Dom.setBlinkArrowRed(true, 555, 222, 30, null, 0).play();
+
+      setCC(
+        "Here, the dc load voltage is non-pulsating and its ripple content is low due to the presence of LC filter on load side."
+      );
+
+      setTimeout(() => {
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 4000);
+
+      //! Required Items
+
+      return true;
+    }),
+
+    //! RL LOAD  CLICK 4
+    (step15 = function () {
+      setIsProcessRunning(true);
+      // to hide previous step
+
+      //! Required Items
+      Scenes.items.btn_next.show();
+      Scenes.items.slider_box.hide();
+
+      Scenes.items.rl_load_click_4.set(10, -25, 453);
+      // Scenes.items.beta_line_blinking.set(104, 134, 196).zIndex(1);
+
+      // anime({
+      //   targets: Scenes.items.beta_line_blinking.item,
+      //   scale: [1, 1.1],
+      //   easing: "easeInOutQuad",
+      //   duration: 2000,
+      //   loop: true,
+      // });
+
+      Dom.setBlinkArrowRed(
+        true,
+        555,
+        312,
+        30,
+        null,
+        0
+      ).play();
+
+      setCC(
+        "This is the source current waveform and it is non sinusoidal nature due to the non linear load presented by the controlled bridge rectifier."
+      );
+
+      setTimeout(() => {
+        setCC("Simulation Done");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        // setIsProcessRunning(false);
+      }, 8000);
+
+      //! Required Items
+
+      return true;
+    }),
   ],
   // ! For adding realcurrentstep in every step
   // ! For tracking the current step accuratly
@@ -3860,6 +4382,14 @@ concept_development: new Dom(".concept_development"),
     }
   },
   next() {
+    let ignore = true
+
+    const ignoreDrawerProgress = ()=>{
+      let stepsToIgnore = [6,7]
+      console.log(this.realCurrentStep)
+      ignore = stepsToIgnore.indexOf(this.realCurrentStep) != -1
+      return 
+    }
     if(!this.realCurrentStep){
       Scenes.setRealCurrentStep()
     }
@@ -3868,9 +4398,13 @@ concept_development: new Dom(".concept_development"),
       return
     }
     if (this.currentStep < this.steps.length) {
+      ignoreDrawerProgress()
+
       if (this.steps[this.currentStep]()) {
-        nextDrawerItem();
-        nextProgressBar();
+        if(!ignore){
+          nextDrawerItem();
+          nextProgressBar();
+        }
         this.currentStep++;
       }         
     } else {
