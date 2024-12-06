@@ -1,5 +1,13 @@
 ### Procedure
 
+<center>
+  <img src="images/procedbig1.png">
+</center>
+<br>
+<center>
+  <img src="images/procedbig2.png">
+</center>
+<br>
 #### a) Circuit formulation:<br>
 1. Connect the circuit to form a single-phase controlled Bridge Rectifier with C-filter and LC-filter<br>
 2. Click on “CHECK” button to verify the circuit.<br>
