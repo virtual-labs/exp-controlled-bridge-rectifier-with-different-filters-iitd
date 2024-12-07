@@ -11,10 +11,10 @@
         "d": "Controls the phase angle of the input AC"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: Here, the capacitor provides low-pass filtering action.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -30,10 +30,10 @@
         "d": "Fluctuates randomly"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: Increasing the firing angle will reduce the conduction time of the thyristors resulting in reduced output voltage.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -49,10 +49,10 @@
         "d": "The angle at which the load is connected to the input AC supply"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: The firing angle is the angle at which a gate signal is applied to a thyristor to trigger it. It is measured in degrees from zero crossing of AC input voltage.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -68,10 +68,10 @@
         "d": "200 Hz"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: For single phase rectifier f<sub>0</sub> = 2f<sub>S</sub>",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -88,11 +88,11 @@
         "d": "Decreases the ripple voltage and improves the load voltage profile"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+        "c": "Explanation 3",
+        "d": "Explanation 4: Large size of capacitor shows more inertia towards the voltage across it. Hence, it reduces the voltage ripple and improves the load voltage profile."
+      }, 
       "correctAnswer": "d",
       "difficulty": "beginner"
     }
