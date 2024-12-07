@@ -152,6 +152,9 @@ const src = {
       val_c: this.allImgsDom[index++],
       val_lc: this.allImgsDom[index++],
 
+      formulas_procedure_slider_1: this.allImgsDom[index++],
+      formulas_procedure_slider_2: this.allImgsDom[index++],
+
       //! EE20 images end here
 
       // * Question Mark

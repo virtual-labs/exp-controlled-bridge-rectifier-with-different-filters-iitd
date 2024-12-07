@@ -4454,7 +4454,21 @@ function btnPopupBox(){
   let popupWindow = document.querySelector(".btn-popup-window")
   
   popupBtns[0].onmouseover = ()=>{
-    popupWindow.src = Scenes.items.formulas_procedure.item.src
+    let procedure_2 = new Dom("formulas_procedure_slider_2")
+    let procedure_1 = new Dom("formulas_procedure_slider_1")
+    
+    switch(Scenes.realCurrentStep){
+      case 5:
+      case 6:
+      case 7:
+      case 8:
+        popupWindow.src = procedure_1.item.src
+        break
+
+      default:
+        popupWindow.src = Scenes.items.formulas_procedure.item.src
+        break
+    }
   }
   popupBtns[1].onmouseover = ()=>{
     popupWindow.src = Scenes.items.formulas_nomenclautre.item.src
