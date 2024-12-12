@@ -263,3 +263,5 @@ The ripple factor is given by
 
 </div>
 <br>
+
+#### ("For more Information on mathematical analysis, see references")
