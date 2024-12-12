@@ -264,4 +264,6 @@ The ripple factor is given by
 </div>
 <br>
 
+<div style="float: left; width:100%;"><br>
 #### ("For more Information on mathematical analysis, see references")
+<br></div>
