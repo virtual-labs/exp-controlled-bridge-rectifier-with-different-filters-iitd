@@ -2,35 +2,96 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+
+      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pos1.png' height='300px'><br>(a)<br><img src='images/pos2.png' height='300px'><br>(b)<br>Fig. 2. Circuit configuration of single-phase controlled rectifier with (a) C-Filter and (b) L-C-Filter.</center><br><br> 1. When the firing angle of a thyristor in a controlled rectifier circuit is increased, what happens to the average output load voltage?",
+      "answers": {        
+        "a": "It remains constant.",
+        "b": "It increases.",
+        "c": "It decreases.",
+        "d": "It becomes zero."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: Increasing the firing angle will reduce the conduction time of the thyristors resulting in reduced output load voltage.",
+        "d": "Explanation 4"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
+      
     {
-      "question": "This is a Sample Question 2?",
+
+      "question": "2. In a controlled rectifier circuit, what is the use of the firing angle control?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To adjust the ripple frequency of the output.",
+        "b": "To control the output voltage.",
+        "c": "To change the phase shift of the input AC voltage.",
+        "d": "To filter the AC input signal."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
+        "b": "Explanation 2: Changing the firing angle will change the conduction time of the thyristors and hence the output load voltage can easily be controlled.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+
+      "question": "3. What is the primary advantage of using an LC-filter over a C-filter in a controlled rectifier circuit?",
+      "answers": {
+        "a": "LC filter is simpler and more compact.",
+        "b": "LC filters provide better ripple attenuation and improve the quality of the DC output.",
+        "c": "LC filter is easy to design and implement.",
+        "d": "LC filters allow higher ripple frequency compared to C filters."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: Capacitive filter reduces the output voltage ripple. However, inductive filter reduces the output current ripple. Hence, ripple attenuation is more with LC filter.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+        
+    {
+
+      "question": "4. What is the effect of increasing the load resistance in LC-filter based controlled bridge rectifier?",
+      "answers": {
+        "a": "The filter’s ripple attenuation improves.",
+        "b": "The capacitor’s charging time decreases.",
+        "c": "The filter’s performance becomes unaffected.",
+        "d": "The output voltage ripple increases due to decreased current through the inductor."
+      },
+      "explanations": {
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4: Increasing the load resistance will reduce the current through it and hence the ripple percentage will be higher."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    
+    {
+      
+
+      "question": "5. In a controlled rectifier circuit with an LC filter, if the firing angle of the thyristors is increased, what happens to the ripple frequency of the output voltage?",
+      "answers": {
+        "a": "The ripple frequency increases.",
+        "b": "The ripple frequency decreases.",
+        "c": "The ripple frequency remains unchanged.",
+        "d": "The ripple frequency becomes erratic."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: Output ripple voltage frequency is independent of firing angle.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
