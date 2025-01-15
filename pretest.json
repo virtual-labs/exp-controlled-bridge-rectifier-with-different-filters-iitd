@@ -1,0 +1,100 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+
+      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pre1.png' height='300px'><br>(a)<br><img src='images/pre2.png' height='300px'><br>(b)<br>Fig. 1. Circuit configuration of Single-Phase controlled Rectifier with (a) C-Filter, and (b) L-C-Filter</center><br><br> 1. What is the primary role of capacitor filter in a controlled rectifier?",
+      "answers": {        
+        "a": "Increases the output voltage",
+        "b": "Reduces the ripple in the DC output voltage",
+        "c": "Decreases the output voltage",
+        "d": "Controls the phase angle of the input AC"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: Here, the capacitor provides low-pass filtering action.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+      
+    {
+
+      "question": "2. When the firing angle of the thyristors in a controlled bridge rectifier is increased, the average DC output voltage:",
+      "answers": {
+        "a": "Increases",
+        "b": "Decreases",
+        "c": "Remains the same",
+        "d": "Fluctuates randomly"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: Increasing the firing angle will reduce the conduction time of the thyristors resulting in reduced output voltage.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+
+      "question": "3. The term 'firing angle' in the context of a controlled bridge rectifier refers to:",
+      "answers": {
+        "a": "The angle at which the thyristors are triggered",
+        "b": "The angle at which the capacitor starts charging ",
+        "c": "The angle of phase shift between input AC and output DC",
+        "d": "The angle at which the load is connected to the input AC supply"
+      },
+      "explanations": {
+        "a": "Explanation 1: The firing angle is the angle at which a gate signal is applied to a thyristor to trigger it. It is measured in degrees from zero crossing of AC input voltage.",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+        
+    {
+
+      "question": "4. Given an RL load in a controlled bridge rectifier circuit with L=2 H and R=10 Ω, if the AC input supply frequency is 50 Hz, what is the ripple frequency in the output load voltage?",
+      "answers": {
+        "a": "25 Hz",
+        "b": "50 Hz",
+        "c": "100 Hz",
+        "d": "200 Hz"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: For single phase rectifier f<sub>0</sub> = 2f<sub>S</sub>",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    
+    {
+      
+
+      "question": "5. What is the impact of increasing the value of the capacitor in the filter circuit of a controlled bridge rectifier?",
+      "answers": {
+        "a": "Decreases the ripple voltage and increases the output voltage",
+        "b": "Increases the ripple voltage and decreases the output voltage",
+        "c": "Has no effect on the ripple voltage or output voltage",
+        "d": "Decreases the ripple voltage and improves the load voltage profile"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4: Large size of capacitor shows more inertia towards the voltage across it. Hence, it reduces the voltage ripple and improves the load voltage profile."
+      }, 
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+  ]
+}
